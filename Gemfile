@@ -16,6 +16,7 @@ gem "jbuilder", "~> 2.5"
 gem "bootstrap-sass", "3.3.6"
 gem "bcrypt", "3.1.11"
 gem "config"
+gem "i18n"
 
 group :development, :test do
 gem "sqlite3", "1.3.12"

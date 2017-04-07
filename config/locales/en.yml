@@ -17,12 +17,14 @@ en:
 
     create:
       welcome: "Welcome to the Sample App!"
+      check_email_activation: "Please check your email to activate your account."
 
     edit:
       title: "Edit user"
       update_your_profile: "Update your profile"
       save_changes: "Save changes"
       change: "change"
+      please_log_in: "Please log in."
 
     update:
       profile_updated: "Profile updated"
@@ -36,6 +38,9 @@ en:
     user:
       delete: "delete"
       you_sure: "You sure?"
+
+    show:
+      please_log_in: "Please log in."
 
   shared:
     error_messages:
@@ -104,3 +109,18 @@ en:
       remember_me: "Remember me on this computer"
     create:
       error_messages: "Invalid email/password combination"
+      account_not_activated: "Account not activated. "
+      check_your_email: "Check your email for the activation link."
+
+  user_mailer:
+    account_activation:
+      subject_mail: "Account activation"
+      sample_app: "Sample App"
+      hi: "Hi"
+      mail_activation_msg: "Welcome to the Sample App!
+        Click on the link below to activate your account:"
+      activate: "Activate"
+    password_reset:
+      hi: "Hi"
+  account_activated: "Account activated"
+  invalid_activation_link: "Invalid activation link"

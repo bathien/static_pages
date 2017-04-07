@@ -28,9 +28,15 @@ en:
       michael_hartl: "Michael Hartl"
       ror_tutorial: "Ruby on Rails Tutorial"
     header:
+      sample_app: "Sample App"
+      account: "Account"
       home: "Home"
       help: "Help"
-      log_in: "Login"
+      log_in: "Log in"
+      log_out: "Log out"
+      profile: "Profile"
+      settings: "Settings"
+      users: "Users"
 
   static_pages:
     home:
@@ -66,3 +72,11 @@ en:
       title: "Contact"
       content: "Contact the Ruby on Rails Tutorial about the sample app at the"
       contact_page: "contact page"
+
+  sessions:
+    new:
+      title: "Log in"
+      sign_up: "Sign up now!"
+      new_user: "New user?"
+    create:
+      error_messages: "Invalid email/password combination"

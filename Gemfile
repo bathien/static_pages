@@ -17,6 +17,9 @@ gem "bootstrap-sass", "3.3.6"
 gem "bcrypt", "3.1.11"
 gem "config"
 gem "i18n"
+gem "faker"
+gem "will_paginate"
+gem "bootstrap-will_paginate"
 
 group :development, :test do
 gem "sqlite3", "1.3.12"

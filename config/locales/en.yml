@@ -8,12 +8,34 @@ en:
         password_confirmation: "Confirmation password"
 
   users:
+    index:
+      title: "All users"
+      please_log_in: "Please log in."
     new:
       sign_up: "Sign up"
       submit: "Create my account"
 
     create:
       welcome: "Welcome to the Sample App!"
+
+    edit:
+      title: "Edit user"
+      update_your_profile: "Update your profile"
+      save_changes: "Save changes"
+      change: "change"
+
+    update:
+      profile_updated: "Profile updated"
+
+    logged_in_user:
+      please_log_in: "Please log in."
+
+    destroy:
+      user_deleted: "User deleted"
+
+    user:
+      delete: "delete"
+      you_sure: "You sure?"
 
   shared:
     error_messages:
@@ -27,6 +49,7 @@ en:
       news: "News"
       michael_hartl: "Michael Hartl"
       ror_tutorial: "Ruby on Rails Tutorial"
+
     header:
       sample_app: "Sample App"
       account: "Account"

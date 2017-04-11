@@ -1,5 +1,18 @@
-min_password_length: 6
-max_name_length: 50
-max_email_length: 255
-gravatar_size: 80
-password_reset_time_expired: 2
+user:
+  max_name_length: 50
+  max_email_length: 255
+  min_password_length: 6
+  password_reset_time_expired: 2
+  param_pages_users: 20
+micropost:
+  max_content_length: 140
+  param_pages_microposts: 20
+gravatar:
+  gravatar_size: 80
+  gravatar_micropost_size: 50
+picture:
+  max_picture_size: 5
+  max_picture_height: 400
+  max_picture_width: 400
+feed:
+  param_pages_feeds: 20

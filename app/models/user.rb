@@ -1,16 +1,18 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
+
   attr_accessor :remember_token, :activation_token, :reset_token
 
   before_create :create_activation_digest
   before_save :downcase_email
-  validates :name, presence: true, length: {maximum: Settings.max_name_length}
+  validates :name, presence: true, length: {maximum: Settings.user.max_name_length}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-  validates :email, presence: true, length: {maximum: Settings.max_email_length},
+  validates :email, presence: true, length: {maximum: Settings.user.max_email_length},
     format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, presence: true,
-    length: {minimum: Settings.min_password_length}, allow_nil: true
+    length: {minimum: Settings.user.min_password_length}, allow_nil: true
 
   def User.digest string
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -55,9 +57,12 @@ class User < ApplicationRecord
   end
 
   def password_reset_expired?
-    reset_sent_at < Settings.password_reset_time_expired.hours.ago
+    reset_sent_at < Settings.user.password_reset_time_expired.hours.ago
   end
 
+  def feed
+    Micropost.where "user_id = ?", id
+  end
 
   private
 

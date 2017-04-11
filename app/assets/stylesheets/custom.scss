@@ -52,14 +52,14 @@ textarea {
 /* header */
 
 #logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
   color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
+  float: left;
+  font-size: 1.7em;
   font-weight: bold;
+  letter-spacing: -1px;
+  margin-right: 10px;
+  padding-top: 9px;
+  text-transform: uppercase;
   &:hover {
     color: white;
     text-decoration: none;
@@ -69,16 +69,16 @@ textarea {
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
   a {
     color: $gray;
     &:hover {
       color: $gray-darker;
     }
   }
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  margin-top: 45px;
+  padding-top: 5px;
   small {
     float: left;
   }
@@ -95,12 +95,19 @@ footer {
 /* sidebar */
 
 aside {
-  section.user_info {
+  section.user-info {
     margin-top: 20px;
   }
   section {
-    padding: 10px 0;
+    h1 {
+      font-size: 1.4em;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+      text-align: left;
+    }
     margin-top: 20px;
+    padding: 10px 0;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -110,13 +117,6 @@ aside {
       margin-bottom: 3px;
       line-height: 1;
     }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
   }
 }
 
@@ -125,7 +125,7 @@ aside {
   margin-right: 10px;
 }
 
-.gravatar_edit {
+.gravatar-edit {
   margin-top: 15px;
 }
 
@@ -138,19 +138,17 @@ aside {
 .debug_dump {
   clear: both;
   float: left;
-  width: 100%;
   margin-top: 45px;
+  width: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* forms */
-
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
   margin-bottom: 15px;
+  width: 100%;
   @include box_sizing;
 }
 
@@ -158,7 +156,7 @@ input {
   height: auto !important;
 }
 
-#error_explanation {
+error-explanation {
   color: red;
   ul {
     color: red;
@@ -166,7 +164,7 @@ input {
   }
 }
 
-.field_with_errors {
+.field-with-errors {
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
@@ -189,10 +187,61 @@ input {
 
 .users {
   list-style: none;
-  margin: 0;
   li {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+  margin: 0;
+}
+
+/* microposts */
+
+.microposts {
+  li {
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 0;
+  }
+  list-style: none;
+  padding: 0;
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+.delete-link{
+  text-decoration: underline;
 }

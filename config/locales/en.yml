@@ -11,6 +11,7 @@ en:
     index:
       title: "All users"
       please_log_in: "Please log in."
+
     new:
       sign_up: "Sign up"
       submit: "Create my account"
@@ -25,27 +26,41 @@ en:
       save_changes: "Save changes"
       change: "change"
       please_log_in: "Please log in."
+      err_find_user: "Error find correct user"
 
     update:
       profile_updated: "Profile updated"
+      err_find_user: "Error find correct user"
 
     logged_in_user:
       please_log_in: "Please log in."
 
     destroy:
       user_deleted: "User deleted"
+      err_find_user: "Error find correct user"
 
     user:
       delete: "delete"
       you_sure: "You sure?"
+      err_find_user: "Error find correct user"
 
     show:
       please_log_in: "Please log in."
+      .microposts: "Microposts"
+      err_find_user: "Error find correct user"
 
   shared:
     error_messages:
       error: "error"
       The_form_contains: "The form contains "
+
+    user_info:
+      view_my_profile: "view my profile"
+      micropost: "micropost"
+
+    micropost_form:
+      compose_new_micropost: "Compose new micropost..."
+      post: "Post"
 
   layouts:
     footer:
@@ -79,6 +94,7 @@ en:
       sign_up: "Sign up now"
       rails_logo: "Rails logo"
       password_has_been_reset.: "Password has been reset."
+      micropost_feed: "Micropost Feed"
     help:
       title: "Help"
       get_help_ruby: "Get help on the Ruby on Rails Tutorial at the"
@@ -166,6 +182,25 @@ en:
         email did not activate."
       err_email_msg: "Your email not found."
 
+  microposts:
+    micropost:
+      ago: "ago."
+      post: "Post "
+      delete: "delete"
+      you_sure: "You sure?"
+    create:
+      micropost_created: "Micropost created!"
+    destroy:
+      micropost_deleted: "Micropost deleted"
+      err_micropost_delete: "Fail to delele this micropost"
+      err_find_user: "Error find correct user"
+  micropost:
+    err_picture_size: "Should be less than 5MB"
+
+  picture:
+    alert:
+      error_image_upload_msg: "Maximum file size is 5MB. Please choose a smaller file."
   account_activated: "Account activated"
   invalid_activation_link: "Invalid activation link"
   password_has_been_reset.: "Password has been reset."
+

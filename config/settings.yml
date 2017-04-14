@@ -4,6 +4,9 @@ user:
   min_password_length: 6
   password_reset_time_expired: 2
   param_pages_users: 20
+  param_pages_follower: 20
+  param_pages_following: 20
+  follow_avatar: 30
 micropost:
   max_content_length: 140
   param_pages_microposts: 20

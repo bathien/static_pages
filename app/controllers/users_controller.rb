@@ -23,9 +23,16 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      @user.send_activation_email
-      flash[:info] = t ".check_email_activation"
-      redirect_to root_url
+      if Rails.env.development?
+        @user.send_activation_email
+        flash[:info] = t ".check_email_activation"
+        redirect_to root_url
+      else
+        @user.activate
+        log_in @user
+        flash[:success] = t ".account_activated"
+        redirect_to @user
+      end
     else
       render :new
     end
@@ -50,6 +57,14 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t ".please_log_in"
+      redirect_to login_url
+    end
   end
 
   def correct_user

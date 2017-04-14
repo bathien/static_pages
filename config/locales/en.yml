@@ -19,6 +19,7 @@ en:
     create:
       welcome: "Welcome to the Sample App!"
       check_email_activation: "Please check your email to activate your account."
+      account_activated: "Account activated"
 
     edit:
       title: "Edit user"
@@ -48,6 +49,24 @@ en:
       please_log_in: "Please log in."
       .microposts: "Microposts"
       err_find_user: "Error find correct user"
+      microposts: "Microposts"
+    follow:
+      follow: "Follow"
+
+    unfollow:
+      unfollow: "Unfollow"
+
+
+  follow:
+    followers:
+      followers: "Followers"
+
+    following:
+      following: "Following"
+
+    show_follow:
+      microposts: "Microposts: "
+      view_my_profile: "view my profile"
 
   shared:
     error_messages:
@@ -61,6 +80,10 @@ en:
     micropost_form:
       compose_new_micropost: "Compose new micropost..."
       post: "Post"
+
+    stats:
+      followers: "follower"
+      following: "following"
 
   layouts:
     footer:
@@ -194,12 +217,14 @@ en:
       micropost_deleted: "Micropost deleted"
       err_micropost_delete: "Fail to delele this micropost"
       err_find_user: "Error find correct user"
+
   micropost:
     err_picture_size: "Should be less than 5MB"
 
   picture:
     alert:
       error_image_upload_msg: "Maximum file size is 5MB. Please choose a smaller file."
+
   account_activated: "Account activated"
   invalid_activation_link: "Invalid activation link"
   password_has_been_reset.: "Password has been reset."

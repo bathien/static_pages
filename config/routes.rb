@@ -7,8 +7,14 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
-  resources :users
   resources :account_activations, only: :edit
   resources :password_resets, except: [:show, :delete]
   resources :microposts, only: [:create, :destroy]
+  resources :users do
+    member do
+      get :following, to: "follow#following"
+      get :followers, to: "follow#followers"
+    end
+  end
+  resources :relationships, only: [:create, :destroy]
 end
